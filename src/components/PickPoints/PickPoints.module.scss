@@ -1,0 +1,11 @@
+@import '/src/style/mixins.scss';
+
+.pick-points-list {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  @include mobile() {
+    width: 100%;
+  }
+}

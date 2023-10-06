@@ -1,0 +1,42 @@
+@import '/src/style/colors.scss';
+@import '/src/style/mixins.scss';
+
+.pick-point {
+  background-color: $highlight;
+  padding: 10px;
+  box-shadow: 0 0 5px rgb(17, 17, 17);
+  border: 1px solid $badgetsBack;
+  border-radius: 3px;
+  cursor: pointer;
+  @include transition(background-color);
+
+  @include mobile() {
+    padding: 5px 10px;
+  }
+
+  &:hover {
+    background-color: $highlightHover;
+  }
+
+  .address {
+    font-weight: 400;
+  }
+
+  .badgets {
+    margin-top: 15px;
+    list-style-type: none;
+    display: flex;
+    gap: 10px;
+
+    @include mobile() {
+      margin-top: 5px;
+    }
+    .badget {
+      display: inline;
+      background-color: $badgetsBack;
+      padding: 4px 10px;
+      font-size: 14px;
+      border-radius: 3px;
+    }
+  }
+}
